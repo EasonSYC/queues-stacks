@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "G5XvnvoDGHNj46cdqM/ndKyRGlGqhtkv8NohcWgSxagniDVRrekegEjAPaH+pDlI9mAJgBg3pWITRZVe7FWZtg==",
+  "dgSpecHash": "DVI8LxZ+AJ/kyJofS61wgsZfncUG1XSNM5QUPXX2Dfl71SAk1AtKaaMAVcn2rVe+673BIo0LVzP+5R7bLb4y5g==",
   "success": true,
-  "projectFilePath": "/Users/easonshao/Projects/QueuesStacks/QueuesStacks.Classes.Application/QueuesStacks.Classes.Application.csproj",
+  "projectFilePath": "/Users/easonshao/Documents/Dev/QueuesStacks/QueuesStacks.Classes.Application/QueuesStacks.Classes.Application.Stacks.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

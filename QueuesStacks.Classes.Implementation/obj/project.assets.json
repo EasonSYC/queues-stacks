@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/easonshao/Projects/QueuesStacks/QueuesStacks.Classes.Implementation/QueuesStacks.Classes.Implementation.csproj",
+      "projectUniqueName": "/Users/easonshao/Documents/Dev/QueuesStacks/QueuesStacks.Classes.Implementation/QueuesStacks.Classes.Implementation.csproj",
       "projectName": "QueuesStacks.Classes.Implementation",
-      "projectPath": "/Users/easonshao/Projects/QueuesStacks/QueuesStacks.Classes.Implementation/QueuesStacks.Classes.Implementation.csproj",
+      "projectPath": "/Users/easonshao/Documents/Dev/QueuesStacks/QueuesStacks.Classes.Implementation/QueuesStacks.Classes.Implementation.csproj",
       "packagesPath": "/Users/easonshao/.nuget/packages/",
-      "outputPath": "/Users/easonshao/Projects/QueuesStacks/QueuesStacks.Classes.Implementation/obj/",
+      "outputPath": "/Users/easonshao/Documents/Dev/QueuesStacks/QueuesStacks.Classes.Implementation/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/easonshao/.nuget/NuGet/NuGet.Config"
