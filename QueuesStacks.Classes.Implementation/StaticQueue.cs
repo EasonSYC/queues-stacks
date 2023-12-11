@@ -1,4 +1,4 @@
-﻿namespace QueuesStacks.Classes.Implementation
+﻿namespace QueuesStacks.Implementation
 {
     public class StaticQueue<T> : IStaticQueue<T>
     {

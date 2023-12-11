@@ -1,4 +1,4 @@
-﻿namespace QueuesStacks.Classes.Implementation
+﻿namespace QueuesStacks.Implementation
 {
     public class DynamicStack<T> : IDynamicStack<T>
     {
