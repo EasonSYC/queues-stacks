@@ -1,10 +1,10 @@
-﻿namespace QueuesStacks
+﻿namespace QueuesStacks;
+
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, world!");
-        }
+        Console.WriteLine("Hello, world!");
     }
 }
+
