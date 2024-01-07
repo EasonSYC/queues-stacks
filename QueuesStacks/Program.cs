@@ -8,6 +8,7 @@ class Program
         PolishNotationDemonstrate();
         TreeDemonstrate();
         BinaryTreeDemonstrate();
+        GraphDemonstrate();
     }
 
     static void PolishNotationDemonstrate()
@@ -68,6 +69,25 @@ class Program
 
         Console.WriteLine("Breadth-first Traversal:");
         tree.BreadthFirstTraversal(data => Console.Write(data + " "));
+        Console.WriteLine();
+    }
+
+    static void GraphDemonstrate()
+    {
+        Graph graph = new Graph(7);
+        graph.AddEdge(0, 1);
+        graph.AddEdge(0, 2);
+        graph.AddEdge(1, 3);
+        graph.AddEdge(1, 4);
+        graph.AddEdge(2, 5);
+        graph.AddEdge(2, 6);
+
+        Console.WriteLine("DFS Traversal:");
+        graph.DFSStart(0, vertex => Console.WriteLine(vertex + " "));
+        Console.WriteLine();
+
+        Console.WriteLine("BFS Traversal:");
+        graph.BFS(0, vertex => Console.WriteLine(vertex + " "));
         Console.WriteLine();
     }
 }
