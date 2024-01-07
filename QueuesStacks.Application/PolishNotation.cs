@@ -1,47 +1,104 @@
 ﻿namespace QueuesStacks.Application;
 
-public class PolishNotation // introduce idea of binary tree traversal
-                            // we will use the built in stacks
+public class PolishNotation
 {
-    public static int CalcPolish(string str) // Calculate for polish notation / prefix notation
+    public static double PrefixNotation(string expression)
     {
-        string[] split = str.Split();
+        string[] tokens = expression.Split(' ');
+        Stack<double> operandStack = new Stack<double>();
 
-        Stack<int> stack = new();
-
-        for (int i = split.Length - 1; i >= 0; --i)
+        for (int i = tokens.Length - 1; i >= 0; i--)
         {
-            switch (split[i])
+            string token = tokens[i];
+
+            if (double.TryParse(token, out double operand))
             {
-                case "+":
-                    stack.Push(stack.Pop() + stack.Pop());
-                    break;
-                case "-":
-                    stack.Push(stack.Pop() - stack.Pop());
-                    break;
-                case "*":
-                    stack.Push(stack.Pop() * stack.Pop());
-                    break;
-                case "/":
-                    stack.Push(stack.Pop() / stack.Pop());
-                    break;
-                default:
-                    stack.Push(int.Parse(split[i]));
-                    break;
+                operandStack.Push(operand);
+            }
+            else
+            {
+                if (operandStack.Count < 2)
+                {
+                    throw new InvalidOperationException("Invalid expression : not enough operands");
+                }
+
+                double operand2 = operandStack.Pop();
+                double operand1 = operandStack.Pop();
+
+                switch (token)
+                {
+                    case "+":
+                        operandStack.Push(operand2 + operand1);
+                        break;
+                    case "-":
+                        operandStack.Push(operand2 - operand1);
+                        break;
+                    case "*":
+                        operandStack.Push(operand2 * operand1);
+                        break;
+                    case "/":
+                        operandStack.Push(operand2 / operand1);
+                        break;
+                    default:
+                        throw new InvalidOperationException("Invalid operator: " + token);
+                }
             }
         }
 
-        return stack.Peek();
+        if (operandStack.Count != 1)
+        {
+            throw new InvalidOperationException("Invalid expression: too many operands");
+        }
+
+        return operandStack.Pop();
     }
 
-    public static int CalcInfix(string str) // Calculate for infix notation / normal notation
+    public static double PostfixNotation(string expression)
     {
-        throw new NotImplementedException();
-    }
+        string[] tokens = expression.Split(' ');
+        Stack<double> operandStack = new Stack<double>();
 
-    public static int CalcRevPolish(string str) // Calculate for inverse polish notation / postfix notation
-    {
-        throw new NotImplementedException();
+        foreach (string token in tokens)
+        {
+            if (double.TryParse(token, out double operand))
+            {
+                operandStack.Push(operand);
+            }
+            else
+            {
+                if (operandStack.Count < 2)
+                {
+                    throw new InvalidOperationException("Invalid expression: not enough operands");
+                }
+
+                double operand2 = operandStack.Pop();
+                double operand1 = operandStack.Pop();
+
+                switch (token)
+                {
+                    case "+":
+                        operandStack.Push(operand1 + operand2);
+                        break;
+                    case "-":
+                        operandStack.Push(operand1 - operand2);
+                        break;
+                    case "*":
+                        operandStack.Push(operand1 * operand2);
+                        break;
+                    case "/":
+                        operandStack.Push(operand1 / operand2);
+                        break;
+                    default:
+                        throw new InvalidOperationException("Invalid operator: " + token);
+                }
+            }
+        }
+        if (operandStack.Count != 1)
+        {
+            throw new InvalidOperationException("Invalid expression: too many operands");
+        }
+
+        return operandStack.Pop();
     }
 
 }

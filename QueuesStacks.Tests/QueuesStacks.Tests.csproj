@@ -18,4 +18,9 @@
 </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\QueuesStacks.Application\QueuesStacks.Application.csproj" />
+    <ProjectReference Include="..\QueuesStacks.Implementation\QueuesStacks.Implementation.csproj" />
+    <ProjectReference Include="..\QueuesStacks\QueuesStacks.csproj" />
+  </ItemGroup>
 </Project>
