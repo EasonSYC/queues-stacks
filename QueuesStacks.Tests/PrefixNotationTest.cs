@@ -51,7 +51,7 @@ public class PrefixNotationTest
 
     [TestMethod]
     [ExpectedException(typeof(InvalidOperationException))]
-    public void TestInvalidExpression_NotEnoughOperands()
+    public void TestInvalidExpressionNotEnoughOperands()
     {
         string expression = "+ 2";
         PolishNotation.PrefixNotation(expression);
@@ -59,7 +59,7 @@ public class PrefixNotationTest
 
     [TestMethod]
     [ExpectedException(typeof(InvalidOperationException))]
-    public void TestInvalidExpression_TooManyOperands()
+    public void TestInvalidExpressionTooManyOperands()
     {
         string expression = "+ 2 3 4 5";
         PolishNotation.PrefixNotation(expression);
@@ -67,7 +67,7 @@ public class PrefixNotationTest
 
     [TestMethod]
     [ExpectedException(typeof(InvalidOperationException))]
-    public void TestInvalidExpression_InvalidOperator()
+    public void TestInvalidExpressionInvalidOperator()
     {
         string expression = "x 2 3";
         PolishNotation.PrefixNotation(expression);

@@ -51,7 +51,7 @@ public class PostfixNotationTest
 
     [TestMethod]
     [ExpectedException(typeof(InvalidOperationException))]
-    public void TestInvalidExpression_NotEnoughOperands()
+    public void TestInvalidExpressionNotEnoughOperands()
     {
         string expression = "2 +";
         PolishNotation.PostfixNotation(expression);
@@ -59,7 +59,7 @@ public class PostfixNotationTest
 
     [TestMethod]
     [ExpectedException(typeof(InvalidOperationException))]
-    public void TestInvalidExpression_TooManyOperands()
+    public void TestInvalidExpressionTooManyOperands()
     {
         string expression = "2 3 4 5 +";
         PolishNotation.PrefixNotation(expression);
@@ -68,7 +68,7 @@ public class PostfixNotationTest
 
     [TestMethod]
     [ExpectedException(typeof(InvalidOperationException))]
-    public void TestInvalidExpression_InvalidOperator()
+    public void TestInvalidExpressionInvalidOperator()
     {
         string expression = "2 3 x";
         PolishNotation.PostfixNotation(expression);

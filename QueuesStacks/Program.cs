@@ -9,6 +9,7 @@ class Program
         TreeDemonstrate();
         BinaryTreeDemonstrate();
         GraphDemonstrate();
+        GridDemonstrate();
     }
 
     static void PolishNotationDemonstrate()
@@ -89,5 +90,22 @@ class Program
         Console.WriteLine("BFS Traversal:");
         graph.BFS(0, vertex => Console.WriteLine(vertex + " "));
         Console.WriteLine();
+    }
+
+    static void GridDemonstrate()
+    {
+        bool[,] grid = 
+        {
+            { false,  true, false, false },
+            { false, false,  true, false },
+            { false,  true, false, false },
+            { false, false, false, false }
+        };
+
+        bool canReachDestinationDFS = Grid.DFSStart(0, 0, 3, 3, grid);
+        bool canReachDestinationBFS = Grid.BFS(0, 0, 3, 3, grid);
+
+        Console.WriteLine("DFS: " + (canReachDestinationDFS ? "Can reach the destination" : "Cannot reach the destination"));
+        Console.WriteLine("BFS: " + (canReachDestinationBFS ? "Can reach the destination" : "Cannot reach the destination"));
     }
 }
