@@ -3,7 +3,7 @@ using QueuesStacks.Application;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
         PolishNotationDemonstrate();
         TreeDemonstrate();
@@ -74,7 +74,7 @@ class Program
 
     static void GraphDemonstrate()
     {
-        Graph graph = new Graph(7);
+        Graph graph = new(7);
         graph.AddEdge(0, 1);
         graph.AddEdge(0, 2);
         graph.AddEdge(1, 3);
