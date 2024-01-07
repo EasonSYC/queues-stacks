@@ -5,7 +5,7 @@ public class PolishNotation
     public static double PrefixNotation(string expression)
     {
         string[] tokens = expression.Split(' ');
-        Stack<double> operandStack = new Stack<double>();
+        Stack<double> operandStack = new();
 
         for (int i = tokens.Length - 1; i >= 0; i--)
         {
@@ -56,7 +56,7 @@ public class PolishNotation
     public static double PostfixNotation(string expression)
     {
         string[] tokens = expression.Split(' ');
-        Stack<double> operandStack = new Stack<double>();
+        Stack<double> operandStack = new();
 
         foreach (string token in tokens)
         {

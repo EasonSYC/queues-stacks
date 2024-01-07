@@ -5,7 +5,7 @@ using QueuesStacks.Application;
 [TestClass]
 public class TreeTest
 {
-    private Tree<int> SampleGeneralTree()
+    private static Tree<int> SampleGeneralTree()
     {
         Tree<int> tree = new(1);
         var root = tree.Root;
@@ -21,9 +21,8 @@ public class TreeTest
     public void TestPreOrderTraversal()
     {
         Tree<int> tree = SampleGeneralTree();
-        StringBuilder result = new StringBuilder();
-        Action<int> action = (data) => result.Append(data + " ");
-        tree.PreOrderTraversal(tree.Root, action);
+        StringBuilder result = new();
+        tree.PreOrderTraversal(tree.Root, (data) => result.Append(data + " "));
         string expected = "1 2 4 5 3 6 ";
         Assert.AreEqual(expected, result.ToString());
     }
@@ -32,9 +31,8 @@ public class TreeTest
     public void TestPostOrderTraversal()
     {
         Tree<int> tree = SampleGeneralTree();
-        StringBuilder result = new StringBuilder();
-        Action<int> action = (data) => result.Append(data + " ");
-        tree.PostOrderTraversal(tree.Root, action);
+        StringBuilder result = new();
+        tree.PostOrderTraversal(tree.Root, (data) => result.Append(data + " "));
         string expected = "4 5 2 6 3 1 ";
         Assert.AreEqual(expected, result.ToString());
     }
@@ -43,9 +41,8 @@ public class TreeTest
     public void TestBreadthFirstTraversal()
     {
         Tree<int> tree = SampleGeneralTree();
-        StringBuilder result = new StringBuilder();
-        Action<int> action = (data) => result.Append(data + " ");
-        tree.BreadthFirstTraversal(action);
+        StringBuilder result = new();
+        tree.BreadthFirstTraversal((data) => result.Append(data + " "));
         string expected = "1 2 3 4 5 6 ";
         Assert.AreEqual(expected, result.ToString());
     }
