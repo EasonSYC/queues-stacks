@@ -10,6 +10,7 @@ class Program
         BinaryTreeDemonstrate();
         GraphDemonstrate();
         GridDemonstrate();
+        ShuntingYardDemonstrate();
     }
 
     static void PolishNotationDemonstrate()
@@ -107,5 +108,15 @@ class Program
 
         Console.WriteLine("DFS: " + (canReachDestinationDFS ? "Can reach the destination" : "Cannot reach the destination"));
         Console.WriteLine("BFS: " + (canReachDestinationBFS ? "Can reach the destination" : "Cannot reach the destination"));
+    }
+
+    static void ShuntingYardDemonstrate()
+    {
+        string? s;
+        do
+        {
+            s = Console.ReadLine();
+            Console.WriteLine(ShuntingYard.EvaluateExpression(s!));
+        } while (!string.IsNullOrWhiteSpace(s));
     }
 }
