@@ -19,7 +19,7 @@ public class PolishNotation
             {
                 if (operandStack.Count < 2)
                 {
-                    throw new InvalidOperationException("Invalid expression : not enough operands");
+                    throw new InvalidOperationException("Invalid expression: not enough operands");
                 }
 
                 double operand2 = operandStack.Pop();

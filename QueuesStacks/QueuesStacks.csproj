@@ -11,4 +11,7 @@
     <ProjectReference Include="..\QueuesStacks.Application\QueuesStacks.Application.csproj" />
     <ProjectReference Include="..\QueuesStacks.Implementation\QueuesStacks.Implementation.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove=".DS_Store" />
+  </ItemGroup>
 </Project>
